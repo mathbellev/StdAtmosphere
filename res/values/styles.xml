@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    <color name="custom_background_color">#dddddd</color>
+    <color name="custom_text_color">#000000</color>
+    
+    <style name="HelpTheme" parent="android:Theme.Dialog">
+            <item name="android:colorBackground">@color/custom_background_color</item>
+            <item name="android:textColor">@color/custom_text_color</item>
+        </style>
+</resources>
