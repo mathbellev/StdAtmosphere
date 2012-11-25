@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity {
 
@@ -130,6 +131,12 @@ public class MainActivity extends FragmentActivity {
 	    vals[3][0] = RHO;
 	    vals[3][1] = VISC;
 	    vals[3][2] = REY;
+	    if (ALTP>50000){
+	    	Toast.makeText(getApplicationContext(), R.string.Altp50k,  Toast.LENGTH_LONG ).show();
+	    }
+	    if (MACH>1) {
+	    	Toast.makeText(getApplicationContext(), R.string.VcasM1, Toast.LENGTH_LONG).show();
+	    }
         
     }
 	

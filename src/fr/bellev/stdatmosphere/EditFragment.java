@@ -78,13 +78,22 @@ public class EditFragment extends Fragment implements OnItemSelectedListener,Tex
 		}
 		return this.mView;
 	}
+	private String format(double value) {
+		NumberFormat DF = NumberFormat.getInstance(Locale.ENGLISH);
+		DF.setGroupingUsed(false);
+		 if (DF instanceof DecimalFormat) {
+		     ((DecimalFormat)DF).setDecimalSeparatorAlwaysShown(true);
+		 }
+    	//((DecimalFormat)DF).applyPattern("#0.000");
+		String text=DF.format(value);
+		return text;
+	}
 	public void update() {
 		this.SetValue(((MainActivity) getActivity()).getIValue(this.Id));
 	}
 	
 	public void SetValue(double value) {
-		NumberFormat DF = NumberFormat.getInstance(Locale.ENGLISH);
-            	((DecimalFormat)DF).applyPattern("#0.000");
+
 		EditText field;
 		Spinner unitSpinner;
 		unitSpinner = (Spinner) this.mView.findViewById(R.id.Unit);
@@ -97,7 +106,7 @@ public class EditFragment extends Fragment implements OnItemSelectedListener,Tex
 		if (pos>-1) {
 			factor=mFactors[pos];
 		}
-		String text = ((DecimalFormat)DF).format(value/factor); 
+		String text = this.format(value/factor); 
 		mBool=true;
 		field.setText(text);
 		return;
@@ -136,8 +145,7 @@ public class EditFragment extends Fragment implements OnItemSelectedListener,Tex
 	}
 	
 	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-		NumberFormat DF = NumberFormat.getInstance(Locale.ENGLISH);
-            	((DecimalFormat)DF).applyPattern("#0.000");
+
 		TextView field;
 		double factor=1;
 		MainActivity host = (MainActivity) view.getContext();
@@ -149,7 +157,7 @@ public class EditFragment extends Fragment implements OnItemSelectedListener,Tex
 			factor=mFactors[pos];
             this.mPos=pos;
 		}
-		String text = ((DecimalFormat)DF).format(this.mValue/factor);
+		String text = this.format(this.mValue/factor);
 		mBool=true;
 		field.setText(text);
 		Log.d("EditFragment","onItemSelected called, new value="+this.mPos);

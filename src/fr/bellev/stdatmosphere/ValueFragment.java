@@ -2,6 +2,7 @@ package fr.bellev.stdatmosphere;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 import android.util.Log;
 import android.view.View;
@@ -30,8 +31,22 @@ public class ValueFragment implements OnItemSelectedListener {
 		return myFragment;
 	}
 
+	private String format(double value){		
+		DecimalFormat DF;
+		try {
+			DF = (DecimalFormat)NumberFormat.getInstance();
+		}
+		catch(Exception e) {
+			DF = (DecimalFormat)NumberFormat.getInstance(Locale.ENGLISH);
+		}
+		DF.applyPattern("@########");
+		if (Math.abs(value)<1e-4) {
+			DF.applyPattern("@#####E0");
+		}
+		String text=DF.format(value);
+		return text;
+	}
 	public void SetValue(double value) {
-		NumberFormat DF = new DecimalFormat("#0.0000");
 		TextView field;
 		Spinner unitSpinner;
 		int pos;
@@ -51,7 +66,7 @@ public class ValueFragment implements OnItemSelectedListener {
 			if (pos>-1) {
 				factor=this.mFactors[pos];
 			}
-			String text = DF.format(value/factor);
+			String text = this.format(value/factor);
 			if (field!=null) {
 				field.setText(text);
 			} else {
@@ -115,7 +130,6 @@ public class ValueFragment implements OnItemSelectedListener {
 	}
 	
 	public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-		NumberFormat DF = new DecimalFormat("#0.0000");
 		TextView field;
 		double factor=1;
 		field = (TextView) mView.findViewById(this.ValId);
@@ -126,7 +140,7 @@ public class ValueFragment implements OnItemSelectedListener {
 		if (pos>-1) {
 			factor=mFactors[pos];
 		}
-		String text = DF.format(this.mValue/factor);
+		String text = this.format(this.mValue/factor);
 		if (field!=null) {
 			field.setText(text);
 		} else {

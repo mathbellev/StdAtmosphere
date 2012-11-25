@@ -1,0 +1,12 @@
+StdAtmosphere for Android devices
+This is a small tool for aeronautical engineering.
+It provide a model of the standard atmosphere, 
+that is to say the temperature and pressure as a function 
+of altitude.
+Given a Mach number, you also get the true air speed and 
+conventionnal air speed.
+
+This tool should work on Android 2.2 (Froyo) or above,
+including tablets.
+
+This tool is free software, licensed under GPL v3.0

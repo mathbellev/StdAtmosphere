@@ -25,8 +25,10 @@
         \n
         Ce logiciel gratuit et open-source (GPL 3.0) a été écrit par Mathieu Belleville (math.bellev@gmail.com)\n
         Les sources sont disponibles à TBD.</string>
-    <string name="help_title">Std Atmosphere Help</string>
+    <string name="help_title">Aide de Std Atmosphere</string>
     <string name="title_activity_main">StdAtmosphere</string>
+    <string name="Altp50k">Les calculs ne sont pas valides pour des altitudes supérieures à 50000m</string>
+    <string name="VcasM1">La calcul de la vitesse conventionelle n\'est pas valide pour Mach>1</string>
     <string name="input">Entrée:</string>
     <string name="TempLabel">DT-ISA</string>
     <string name="AltLabel">Altitude</string>
