@@ -6,7 +6,7 @@ of altitude.
 Given a Mach number, you also get the true air speed and 
 conventionnal air speed.
 
-This tool should work on Android 2.2 (Froyo) or above,
+This tool should work on Android 4.4 (KitKat) or above,
 including tablets.
 
 This tool is free software, licensed under GPL v3.0

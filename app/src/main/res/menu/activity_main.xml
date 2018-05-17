@@ -1,0 +1,18 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/switch_theme"
+        android:orderInCategory="1"
+        android:title="@string/switch_theme"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_help"
+        android:orderInCategory="2"
+        android:title="@string/menu_help"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="3"
+        android:title="@string/menu_about"
+        app:showAsAction="never" />
+</menu>

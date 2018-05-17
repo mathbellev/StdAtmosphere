@@ -1,0 +1,119 @@
+<resources>
+
+    <string name="app_name">Std Atmosphere</string>
+    <string name="Ok">OK</string>
+    <string name="help_text">Cet outil calcule les caractéristiques de l\'atmosphère suivant le standard ANSI.\n
+        Les entrées sont: \n
+        -DT-ISA: delta par rapport à la température standard.\n
+        -Altitude: l\'altitude\n
+        -Mach: le nombre de Mach\n
+        L\'outil calcule:\n
+        -la température standard\n
+        -la température statique (standard + DT-ISA)\n
+        -la température totale\n
+        -la vitesse du son\n
+        -la vitesse vraie\n
+        -la vitesse conventionnelle\n
+        -la pression statique\n
+        -la pression totale\n
+        -la pression dynamique (celle vue par un objet volant, c\'est à dire 0.7xPxM²)\n
+        -la densité de l\'air\n
+        -la viscosité de l\'air\n
+        -le nombre de Reynolds par unité de longueur\n
+        \n
+        \n
+        Ce logiciel gratuit et open-source (GPL 3.0) a été écrit par Mathieu Belleville (math.bellev@gmail.com)\n
+        Les sources sont disponibles à https://github.com/mathbellev/StdAtmosphere.</string>
+    <string name="about"><h3>Std Atmosphere</h3>\n\n
+        Version 2.0\n\n
+        Cette application est gratuite et son code source est libre (GPL 3.0).\n
+        Ecrite par Mathieu Belleville (math.bellev@gmail.com)\n
+        Vous pouvez obtenir le code source à l\'adresse https://github.com/mathbellev/StdAtmosphere.</string>
+    <string name="legal">Ce logiciel est fournit sans garantie d\'aucune sorte.
+        en particulier, ce logiciel ne saurais être tenu pour responsable d\'une perte d\'argent,
+        paralysie temporaire, halitose, combustion spontanée, éruption cutanée,
+        ou perte de cheveux prématurée.</string>
+    <string name="help_title">Aide de Std Atmosphere</string>
+    <string name="menu_help">Aide</string>
+    <string name="menu_about">A propos</string>
+    <string name="switch_theme">Change clair/foncé</string>
+    <string name="about_title">A propos de Std Atmosphere</string>
+    <string name="title_activity_main">StdAtmosphere</string>
+    <string name="Altp50k">Les calculs ne sont pas valides pour des altitudes supérieures à 50000m</string>
+    <string name="VcasM1">La calcul de la vitesse conventionelle n\'est pas valide pour Mach>1</string>
+    <string name="input">Entrée:</string>
+    <string name="TempLabel">DT-ISA</string>
+    <string name="AltLabel">Altitude</string>
+    <string name="MachLabel">Mach</string>
+
+    <string name="zero">0</string>
+    
+    <string name="TstdLabel">Temp. Std.</string>
+    <string name="AbsTempLabel">Temp. Abs.</string>
+    <string name="TtlLabel">Temp. Tot.</string>
+    <string name="PambLabel">Press. Amb.</string>
+    <string name="PtlLabel">Press. Tot.</string>
+    <string name="PdynLabel">Press. Dyn.</string>
+    <string name="vsonLabel">Vit. du son</string>
+    <string name="TASLabel">Vit. Vraie</string>
+    <string name="CASLabel">Vit. Conv.</string>
+    <string name="rhoLabel">Densité</string>
+    <string name="ViscLabel">Viscosité</string>
+    <string name="ReyLabel">Reynolds</string>
+    <string-array name="Tabs">
+        <item>Temperatures</item>
+        <item>Vitesses</item>
+        <item>Pressions</item>
+        <item>Divers</item>
+    </string-array>
+    
+    <string-array name="TempUnits">
+        <item>K</item>
+        <item>R</item>
+        <item>To</item>
+    </string-array>
+    
+    <string-array name="AltUnits">
+        <item>m</item>
+        <item>ft</item>
+        <item>km</item>
+    </string-array>
+ 
+    <string-array name="MachUnits">
+        <item>---</item>
+    </string-array>
+    
+    <string-array name="PressureUnits">
+        <item>Pa</item>
+        <item>Psia</item>
+        <item>atm</item>
+        <item>bar</item>
+        <item>mbar</item>
+    </string-array>
+    
+    <string-array name="SpeedUnits">
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>mph</item>
+        <item>kt</item>
+        <item>ft/s</item>
+        <item>ft/min</item>
+        <item>a0</item>
+    </string-array>
+    <string-array name="DensityUnits">
+        <item>kg/m3</item>
+        <item>lb/ft3</item>
+        <item>rho0</item>
+    </string-array>
+    <string-array name="ViscUnits">
+        <item>1e6.Pl</item>
+        <item>Poises</item>
+    </string-array>
+    <string-array name="ReynoldsUnits">
+        <item>1e6/m</item>
+        <item>1/m</item>
+        <item>1e6/ft</item>
+        <item>1/ft</item>
+    </string-array>
+
+</resources>
