@@ -1,9 +1,0 @@
-<h3>Std Atmosphere</h3>
-<br>Version 2.0<br>
-<br>
-This tool is free open source software (GPL 3.0)<br>
-Created by Mathieu Belleville (math.bellev@gmail.com)<br>
-You may get the sources at <b>https://github.com/mathbellev/StdAtmosphere.</b>
-<br>
-This dialog by <a href="https://www.techrepublic.com/search/?a=william+j.+francis">William J. Francis</a>
-<br>

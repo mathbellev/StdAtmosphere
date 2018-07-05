@@ -1,0 +1,4 @@
+#Wed Jul 04 12:00:44 CEST 2018
+base.0=C\:\\Users\\to13204\\AndroidStudioProjects\\StdAtmosphere\\StdAtmosphere\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
